@@ -25,7 +25,7 @@ app.post('/sipsak', (req, res) => {
       res.status(200).send(`SIP server is AVAILABLE\n${output}`);
     } else {
       console.log('SIP server is not available');
-      res.status(502).senid(`SIP server is NOT available\n${output}`);
+      res.status(502).send(`SIP server is NOT available\n${output}`);
     }
   });
 });
