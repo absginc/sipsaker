@@ -30,7 +30,7 @@ This command will start a new Docker container based on the "sipsaker" image, ma
 The Sipsaker Docker application provides an API for accessing Sipsak functionality
 
  To use the API, send an HTTP POST requests to the following endpoint:
-* /sipsak: with a host IP value to "hostIp" and optionally a value of "hostPort" if it differs fom 5060.
+* /sipsak: with a host IP value to "hostIp" and optionally a value of "hostPort" if it differs from 5060.
 * Successful SIP OPTION will return a 200 OK response and SIP server is AVAILABLE
 * UN-Successful SIP OPTION with no reply will return a 502 response and SIP server is NOT available
 
@@ -59,7 +59,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"hostIp":"194.201.25.19","
 
 For more information on the Sipsak command-line tool and its functionality, [see the official Sipsak documentation.](https://github.com/nils-ohlmeier/sipsak)
 
-For more information on the uptime-kuma and its functionality, [see the official uptime-kuma documentation.](https://github.com/louislam/uptime-kuma))
+For more information on uptime-kuma and its functionality, [see the official uptime-kuma documentation.](https://github.com/louislam/uptime-kuma))
 
 
 
