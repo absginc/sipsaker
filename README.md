@@ -16,8 +16,9 @@ Clone the Repository and CD into the sipsaker folder.
 This command will build the Docker image with the name "sipsaker". 
 
 Once the image is built, you can run a Docker container based on the image using the following command:
-
-### docker run -p 3000:3000 -d —name sipsaker-container sipsaker
+```console
+docker run -p 3000:3000 -d —name sipsaker-container sipsaker
+```
 
 This command will start a new Docker container based on the "sipsaker" image, map port 3000 inside the container to port 3000 on the host, and name the container "sipsaker-container". 
 
@@ -31,8 +32,12 @@ The Sipsaker Docker application provides an API for accessing Sipsak functionali
 * UN-Successful SIP OPTION with no reply will return a 502 response and SIP server is NOT available
 
 ## CURL EXAMPLE
-###curl -X POST -H "Content-Type: application/json" -d '{"hostIp":"194.201.25.19"}' http://localhost:3000/sipsak
-###curl -X POST -H "Content-Type: application/json" -d '{"hostIp":"194.201.25.19","hostPort":"5080"}' http://localhost:3000/sipsak
+```console
+curl -X POST -H "Content-Type: application/json" -d '{"hostIp":"194.201.25.19"}' http://localhost:3000/sipsak
+```
+```console
+curl -X POST -H "Content-Type: application/json" -d '{"hostIp":"194.201.25.19","hostPort":"5080"}' http://localhost:3000/sipsak
+```
 
 ## UPTIME KUMA Integration Example
 * Create a new Monitor with a Monitor Type of HTTP(s)
