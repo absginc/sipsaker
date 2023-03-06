@@ -65,7 +65,6 @@ For more information on the Sipsak command-line tool and its functionality, [see
 
 For more information on uptime-kuma and its functionality, [see the official uptime-kuma documentation.](https://github.com/louislam/uptime-kuma))
 
-
-
+[sipsaker.com](https://sipsaker.com))
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
