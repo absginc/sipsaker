@@ -53,7 +53,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"hostIp":"194.201.25.19","
 
 200 OK is the response for a good ping.  502 is returned for a bad ping.
 
-![200 OK Value Accepted Range](/kuma-images/uptime-kuma1.png)
+![200 OK Value Accepted Range](/kuma-images/uptime-kuma2.png)
 
 
 
