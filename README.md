@@ -33,7 +33,7 @@ This command will start a new Docker container based on the "sipsaker" image, ma
 The Sipsaker Docker application provides an API for accessing Sipsak functionality
 
  To use the API, send an HTTP POST requests to the /sipsak endpoint:
-* The SIP host IP is sent in the vakue of key name "hostIp"
+* The SIP host IP is sent in the value of key name "hostIp"
 * Optionally "hostPort" can be provided if it differs from 5060.
 * Successful SIP OPTION will return (200 OK) and "SIP server is AVAILABLE"
 * UN-Successful SIP OPTION with no option reply will return (502 Bad Gateway) and "SIP server is NOT available"
