@@ -1,5 +1,5 @@
 # Sipsaker
-#### Docker Application w/ sipsak command-line tool powered by a node/express application providing SIP OPTION results executed by HTTP POST results for use in uptime kuma or other monitoring tools.
+#### Docker Application w/ sipsak command-line tool powered by a node/express application providing SIP OPTION results executed by an HTTP POST that provides results for use in uptime kuma or other monitoring tools.
 
 This is a Docker application for running the Sipsak network tool.  It includes the Sipsak command-line tool and a Node.js app that provides a REST API for accessing Sipsak functionality. 
 
