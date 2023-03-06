@@ -8,7 +8,7 @@ Use the source in app.js to build a route in your existing node express applicat
 ## Installation
 To run this application, you will need to have Docker installed on your machine. Once you have Docker installed, you can run the following command to build the Docker image:
 
-## Build Image
+### Build Image
 Clone the Repository and CD into the sipsaker folder.
 
 ```console
@@ -17,6 +17,7 @@ docker build -t sipsaker .
 
 This command will build the Docker image with the name "sipsaker". 
 
+### Deploy Container
 Once the image is built, you can run a Docker container based on the image using the following command:
 ```console
 docker run -p 3000:3000 -d —name sipsaker-container sipsaker
@@ -33,7 +34,7 @@ The Sipsaker Docker application provides an API for accessing Sipsak functionali
 * Successful SIP OPTION will return a 200 OK response and SIP server is AVAILABLE
 * UN-Successful SIP OPTION with no reply will return a 502 response and SIP server is NOT available
 
-## CURL EXAMPLE
+### CURL EXAMPLE
 ```console
 curl -X POST -H "Content-Type: application/json" -d '{"hostIp":"194.201.25.19"}' http://localhost:3000/sipsak
 ```
