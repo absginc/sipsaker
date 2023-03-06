@@ -6,16 +6,16 @@ This is a Docker application for running the Sipsak network tool. It includes th
 Use the source in app.js to build a route in your existing node express application or deploy a simple docker container to run as a sipsaker.
 
 ## Installation
-To run this application, you will need to have Docker installed on your machine. Once you have Docker installed, you can run the following command to build the Docker image:
+To run this application, you will need to have Docker installed on your machine.
 
 ### Build Image
-Once you have cloned the repository change into its folder and issue the following command.
+Run the following command from the repository folder to build the Docker image:
 
 ```console
 docker build -t sipsaker .
 ```
+The command will build the Docker image with the name "sipsaker". 
 
-This command will build the Docker image with the name "sipsaker". 
 
 ### Deploy Container
 Once the image is built, you can run a Docker container based on the image using the following command:
@@ -30,7 +30,7 @@ This command will start a new Docker container based on the "sipsaker" image, ma
 The Sipsaker Docker application provides an API for accessing Sipsak functionality
 
  To use the API, send an HTTP POST requests to the following endpoint:
-* /sipsak: with a host IP value to "hostIp" and optional value of "hostPort"
+* /sipsak: with a host IP value to "hostIp" and optionally a value of "hostPort" if it differs fom 5060.
 * Successful SIP OPTION will return a 200 OK response and SIP server is AVAILABLE
 * UN-Successful SIP OPTION with no reply will return a 502 response and SIP server is NOT available
 
@@ -42,7 +42,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"hostIp":"194.201.25.19"}'
 curl -X POST -H "Content-Type: application/json" -d '{"hostIp":"194.201.25.19","hostPort":"5080"}' http://localhost:3000/sipsak
 ```
 
-## UPTIME KUMA Integration Example
+### UPTIME KUMA Integration Example
 * Create a new Monitor with a Monitor Type of HTTP(s)
 * Use the URL of your sipsaker application posting to the /sipsak resource
 * Change the HTTP Options method to POST
@@ -52,6 +52,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"hostIp":"194.201.25.19","
 ![Kuma Dashboard Settings](/kuma-images/uptime-kuma1.png)
 
 200 OK is the response for a good ping.  502 is returned for a bad ping.
+
 ![200 OK Value Accepted Range](/kuma-images/uptime-kuma1.png)
 
 
