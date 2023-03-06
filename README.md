@@ -11,7 +11,9 @@ To run this application, you will need to have Docker installed on your machine.
 ## Build Image
 Clone the Repository and CD into the sipsaker folder.
 
-### docker build -t sipsaker .
+```console
+docker build -t sipsaker .
+```
 
 This command will build the Docker image with the name "sipsaker". 
 
