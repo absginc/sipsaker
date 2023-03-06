@@ -1,9 +1,10 @@
 # Sipsaker
-#### Docker Application w/ sipsak command-line tool powered by a node/express application providing SIP OPTION results executed by an HTTP POST that provides results for use in uptime kuma or other monitoring tools.
+#### Docker Application w/ sipsak command-line tool powered by a node/express application 
 
-This is a Docker application for running the Sipsak network tool.  It includes the Sipsak command-line tool and a Node.js app that provides a REST API for accessing Sipsak functionality. 
 
-Use the source in app.js to build a route in your existing node express application or deploy a simple docker container to run as a sipsaker.
+This is a Docker application for running the Sipsak network tool.  It includes the Sipsak command-line tool and a Node.js app that provides a REST API for accessing Sipsak functionality.  SIP OPTION messages are executed by an HTTP POST request that provides the results of the SIP OPTIONS request by HTTP status for easy use in uptime kuma or other monitoring tools.
+
+Use the source in app.js and build a route in your existing node express application or deploy this simple docker container to run as a sipsaker.
 
 ### Monitor your VOIP server with Uptime Kuma or other monitoring tools.
 
@@ -31,10 +32,11 @@ This command will start a new Docker container based on the "sipsaker" image, ma
 ## Usage
 The Sipsaker Docker application provides an API for accessing Sipsak functionality
 
- To use the API, send an HTTP POST requests to the following endpoint:
-* /sipsak: with a host IP value to "hostIp" and optionally a value of "hostPort" if it differs from 5060.
-* Successful SIP OPTION will return a 200 OK response and SIP server is AVAILABLE
-* UN-Successful SIP OPTION with no reply will return a 502 response and SIP server is NOT available
+ To use the API, send an HTTP POST requests to the /sipsak endpoint:
+* The SIP host IP is sent in the vakue of key name "hostIp"
+* Optionally "hostPort" can be provided if it differs from 5060.
+* Successful SIP OPTION will return (200 OK) and "SIP server is AVAILABLE"
+* UN-Successful SIP OPTION with no option reply will return (502 Bad Gateway) and "SIP server is NOT available"
 
 ### CURL EXAMPLE
 ```console
@@ -46,9 +48,9 @@ curl -X POST -H "Content-Type: application/json" -d '{"hostIp":"194.201.25.19","
 
 ### UPTIME KUMA Integration Example
 * Create a new Monitor with a Monitor Type of HTTP(s)
-* Use the URL of your sipsaker application posting to the /sipsak resource
+* Use the URL of your sipsaker application,  POST to the /sipsak resource
 * Change the HTTP Options method to POST
-* Assemble some JSON containing at minimum a value for hostIp, and optionally a value for hostPort if it differs from 5060.
+* Assemble JSON containing at minimum a value for hostIp, and optionally a value for hostPort if it differs from 5060.
 
 
 ![Kuma Dashboard Settings](/kuma-images/uptime-kuma1.png)
