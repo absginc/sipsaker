@@ -58,5 +58,9 @@ curl -X POST -H "Content-Type: application/json" -d '{"hostIp":"194.201.25.19","
 
 For more information on the Sipsak command-line tool and its functionality, [see the official Sipsak documentation.](https://github.com/nils-ohlmeier/sipsak)
 
+For more information on the uptime-kuma and its functionality, [see the official uptime-kuma documentation.](https://github.com/louislam/uptime-kuma))
+
+
+
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
