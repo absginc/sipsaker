@@ -9,7 +9,7 @@ Use the source in app.js to build a route in your existing node express applicat
 To run this application, you will need to have Docker installed on your machine. Once you have Docker installed, you can run the following command to build the Docker image:
 
 ### Build Image
-Clone the Repository and CD into the sipsaker folder.
+Once you have cloned the repository change into its folder and issue the following command.
 
 ```console
 docker build -t sipsaker .
