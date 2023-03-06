@@ -1,4 +1,4 @@
-# Sipsaker
+# sipsaker
 #### Docker Application w/ sipsak command-line tool powered by a node/express application 
 
 
