@@ -23,7 +23,7 @@ The command will build the Docker image with the name "sipsaker".
 ### Deploy Container
 Once the image is built, you can run a Docker container based on the image using the following command:
 ```console
-docker run -p 3000:3000 -d -—name sipsaker-container sipsaker
+docker run -p 3000:3000 -d --name sipsaker sipsaker
 ```
 
 This command will start a new Docker container based on the "sipsaker" image, map port 3000 inside the container to port 3000 on the host, and name the container "sipsaker-container". 
